@@ -1,3 +1,4 @@
+import pytest
 from calculator import divide, calculate_average
 
 
@@ -6,9 +7,8 @@ def test_divide():
 
 
 def test_divide_by_zero():
-    # This will crash with ZeroDivisionError - our real bug
-    result = divide(10, 0)
-    assert result is not None
+    with pytest.raises(ZeroDivisionError):
+        divide(10, 0)
 
 
 def test_average():
