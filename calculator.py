@@ -1,5 +1,5 @@
-def divide(a, b):
-    return a * b
+def divide(a, b):  # Fix: Change multiplication to division
+    return a / b
 
 
 def calculate_average(numbers):
